@@ -12,6 +12,11 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// ✅ Root route (ADD THIS)
+app.get('/', (req, res) => {
+  res.send('API is running 🚀');
+});
+
 // Routes
 app.use('/api/contact', contactRoutes);
 
